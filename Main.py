@@ -1,5 +1,5 @@
 from fastapi import FastAPI
 app = FastAPI()
-@app.post("/endpoint/{string}")
-async def read_item(string):
+@app.post("/endpoint")
+async def read_item(string: str):
     return {"string": string}
